@@ -1,5 +1,7 @@
 
-### 📌 **README for Colab-Based RAG Chatbot & OCR System**  
+
+### **📌 README.md**  
+
 ```markdown
 # 🚀 AI Engineer Internship Projects (Google Colab)
 
@@ -8,43 +10,44 @@ This repository contains two AI projects built as part of my AI Engineer Interns
 1️⃣ **RAG Chatbot** – A Retrieval-Augmented Generation (RAG) chatbot that allows users to upload documents (PDF, DOCX, TXT) and ask questions about them.  
 2️⃣ **OCR System** – A text extraction tool using **Tesseract OCR** to extract text from images and scanned documents.
 
-Both projects were developed in **Google Colab** and can be executed directly from there. 🚀  
+---
+
+## 📂 Project Files
+
+📜 **RAG_chatbot.ipynb** – Google Colab notebook for the Retrieval-Augmented Generation chatbot.  
+📜 **OCR.ipynb** – Google Colab notebook for Optical Character Recognition using Tesseract OCR.  
+📜 **README.md** – Project documentation.  
 
 ---
 
-## 📌 **Project 1: RAG Chatbot** (Retrieval-Augmented Generation)
+## 🔹 **Project 1: RAG Chatbot**
+### ✨ Features
+✔️ Upload and process **PDF, DOCX, and TXT files**  
+✔️ Perform **semantic search** using **ChromaDB**  
+✔️ **AI-generated answers** using **Mistral-7B / GPT-3.5-turbo**  
+✔️ **Streamlit UI** for an interactive chat experience  
+✔️ **ngrok integration** for external access  
 
-### ✨ **Features**
-- 📄 Upload multiple documents (PDF, DOCX, TXT)
-- 🔍 Perform **semantic search** over the documents using **ChromaDB**
-- 🤖 Ask questions, and get AI-generated answers based on document context
-- 🎤 Uses **Mistral-7B / GPT-3.5-turbo** for response generation
-- 🌐 **Hosted via ngrok** for external access
-
-### 🛠 **Tech Stack**
-- **Google Colab** (Execution)
-- **Streamlit** (UI Framework)
+### 🛠 Tech Stack
+- **Streamlit** (Frontend)
 - **LangChain** (RAG Framework)
 - **ChromaDB** (Vector Storage)
 - **Mistral-7B / GPT-3.5-turbo** (AI Model)
 - **PyPDFLoader, Docx2txtLoader, TextLoader** (Document Parsing)
-- **ngrok** (To expose Colab app to the internet)
+- **ngrok** (For public access in Colab)
 
-### 🚀 **Run in Google Colab**
-1. **Open the Colab Notebook**  
-   👉 [Colab Link](https://colab.research.google.com/drive/YOUR_NOTEBOOK_ID)  
-
-2. **Install Dependencies**
+### 🚀 Run in Google Colab
+1. Open the Colab Notebook:  
+   👉 [Colab Link]([https://colab.research.google.com/drive/YOUR_NOTEBOOK_ID](https://colab.research.google.com/drive/1Efqak4qS6_Vzws35YI4BwuEbVOUXKJIs?usp=sharing))  
+2. Install Dependencies:  
    ```python
    !pip install streamlit langchain_community chromadb tiktoken pypdf pyngrok
    ```
-
-3. **Run Streamlit in Colab**
+3. Run Streamlit App:  
    ```python
    !streamlit run app.py & npx localtunnel --port 8501
    ```
-
-4. **Expose the App via ngrok**
+4. Expose the App via ngrok:  
    ```python
    !pip install pyngrok
    !ngrok authtoken YOUR_NGROK_AUTH_TOKEN
@@ -54,29 +57,27 @@ Both projects were developed in **Google Colab** and can be executed directly fr
 
 ---
 
-## 📌 **Project 2: OCR System** (Optical Character Recognition)
+## 🔹 **Project 2: OCR System**
+### ✨ Features
+✔️ Extracts text from **images (JPG, PNG) and scanned PDFs**  
+✔️ Uses **Tesseract OCR** for accurate text recognition  
+✔️ Supports **batch processing** of multiple files  
+✔️ Converts scanned text into **editable formats**  
 
-### ✨ **Features**
-- 📷 Extracts text from **images (JPG, PNG) and scanned PDFs**
-- 🔍 Uses **Tesseract OCR** for high-accuracy text extraction
-- 📥 Supports **batch processing** of multiple files
-
-### 🛠 **Tech Stack**
+### 🛠 Tech Stack
 - **Google Colab** (Execution)
 - **Pytesseract** (OCR Engine)
 - **OpenCV** (Image Preprocessing)
 - **Pandas** (For text processing & storage)
 
-### 🚀 **Run in Google Colab**
-1. **Open the Colab Notebook**  
-   👉 [Colab Link](https://colab.research.google.com/drive/YOUR_NOTEBOOK_ID)  
-
-2. **Install Dependencies**
+### 🚀 Run in Google Colab
+1. Open the Colab Notebook:  
+   👉 [Colab Link]([https://colab.research.google.com/drive/YOUR_NOTEBOOK_ID](https://colab.research.google.com/drive/1vYeEGJaFgrCHAQfK5ER50J4NG5Z1F7-M?usp=sharing))  
+2. Install Dependencies:  
    ```python
    !pip install pytesseract opencv-python pandas
    ```
-
-3. **Run the OCR Script**
+3. Run the OCR Script:  
    ```python
    import pytesseract
    import cv2
@@ -91,40 +92,32 @@ Both projects were developed in **Google Colab** and can be executed directly fr
 
 ---
 
-## 📌 **Deployment**
-### 🌐 **For RAG Chatbot**
-1. **Deploy via Colab + ngrok**
-2. **Or host on Streamlit Cloud / Hugging Face Spaces**
+## 🌐 Deployment
+### 🔹 **For RAG Chatbot**
+- ✅ Deployed via **Colab + ngrok**
+- ✅ Can also be hosted on **Streamlit Cloud / Hugging Face Spaces**
 
-### ☁️ **For OCR**
-- Can be deployed as a **Flask API** in Colab.
-
----
-
-## 📌 **Project Structure (Colab)**
-```bash
-📂 AI-Internship-Projects
-│── 📂 RAG-Chatbot (Colab Notebook)
-│   ├── app.py                # Streamlit RAG Chatbot
-│   ├── Colab Notebook        # RAG Chatbot in Google Colab
-│
-│── 📂 OCR-System (Colab Notebook)
-│   ├── ocr_script.py         # OCR Processing Script
-│   ├── Colab Notebook        # OCR in Google Colab
-│
-└── README.md                 # Project Documentation
-```
+### 🔹 **For OCR**
+- ✅ Can be deployed as a **Flask API** in Colab
 
 ---
 
 ## 📌 **Contributing**
-Feel free to contribute by creating a pull request! If you find issues, report them in the Issues section.
+💡 If you have suggestions or improvements, feel free to **open an issue** or **submit a pull request**!  
 
 ---
 
 ## 📌 **Contact**
 🔗 **GitHub:** [github.com/kavyakapoor200](https://github.com/kavyakapoor200)  
-📧 **Email:**kavyakapoor869@gmail.com** 
+📧 **Email:** kavyakapoor869@gmail.com
 ```
 
 ---
+
+```bash
+git add README.md
+git commit -m "Updated README with project details"
+git push origin main
+```
+
+🎉 **Now your repo looks professional & well-documented! Let me know if you need changes.** 🚀😊
