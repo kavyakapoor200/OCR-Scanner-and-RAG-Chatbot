@@ -113,11 +113,3 @@ This repository contains two AI projects built as part of my AI Engineer Interns
 ```
 
 ---
-
-```bash
-git add README.md
-git commit -m "Updated README with project details"
-git push origin main
-```
-
-🎉 **Now your repo looks professional & well-documented! Let me know if you need changes.** 🚀😊
